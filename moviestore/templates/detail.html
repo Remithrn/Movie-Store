@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% block body %}
+<div class="container-card">
+<div class="card details">
+  <div class="card-header bg-dark text-light">
+    <b> Movie Id: {{ movies.id }}</b>
+  </div>
+  <img src="{{ movies.img.url }}" class="card-img-top" alt="{{ movies.name }}" >
+  <div class="card-body">
+    <h5 class="card-title">{{ movies.name }} ({{ movies.year }})</h5>
+    <p class="card-text">{{ movies.dec }}</p>
+    <div class="d-flex justify-content-end">
+      <a href="{% url 'movieapp:update' movies.id %}" class="btn btn-outline-primary me-2">Update</a>
+      <a href="{% url 'movieapp:remove' movies.id %}" class="btn btn-danger">Delete</a>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{%extends 'base.html' %}
+{% block body %}
+
+<br><br>
+
+<form class="update_form" method="POST" style="background-color: rgb(147, 255, 221);">
+  <h1 style="text-align: center;"><b>Update Details</b></h1>
+  {% csrf_token %}
+  {{form.as_p}}
+  <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+
+
+{% endblock %}

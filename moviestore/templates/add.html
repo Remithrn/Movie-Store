@@ -1,0 +1,32 @@
+{%extends 'base.html' %}
+{% block body %}
+<br><br><br>
+<div class="form-container" style="background-color: rgb(147, 255, 221);">
+<h1><b>Add New Movies</b></h1>
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Name</span>
+  <input type="text" class="form-control" placeholder="Movie Name" aria-label="Username" aria-describedby="basic-addon1" name="name">
+</div>
+
+
+  <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon">Year</span>
+  <input type="number" class="form-control" placeholder="Enter Year Of Release" aria-label="Username" aria-describedby="basic-addon1" name="year">
+</div>
+
+  <div class="input-group mb-3">
+  <input type="file" class="form-control" id="inputGroupFile02" name="img">
+  <label class="input-group-text" for="inputGroupFile02">Upload</label>
+</div>
+  <div class="input-group">
+  <span class="input-group-text">Description</span>
+  <textarea class="form-control" aria-label="With textarea" name="dec"></textarea>
+</div>
+  <br>
+  <input class="btn btn-primary" type="submit" value="Submit">
+
+</form>
+</div>
+{% endblock%}

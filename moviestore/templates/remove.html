@@ -1,0 +1,16 @@
+{%extends 'base.html' %}
+{% block body %}
+<form method="POST">
+  {%csrf_token%}
+  <br><br><br><br><br><br><br><br><br><br>
+  <h1 style="text-align:center;">Are you sure u want to delete {{movies.name}}?</h1>
+  <br>
+  <div class="buttonz">
+  <a href="/" class="btn btn-primary">cancel</a>
+
+    <input class="btn btn-danger" type="submit" value="delete">
+    </div>
+
+</form>
+
+{% endblock%}
